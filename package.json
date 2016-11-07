@@ -1,0 +1,43 @@
+{
+  "name": "happn-tests-2",
+  "description": "test templates for happn-3",
+  "version": "0.0.1",
+  "main":"./tests.js",
+  "scripts": {
+    "test": "node --expose-gc run --silent",
+    "test-cover": "istanbul cover _mocha -- silence.js test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/happner/happn-tests-2.git"
+  },
+  "dependencies": {
+    "async": "^1.5.2",
+    "benchmarket": "*",
+    "byline": "^4.2.1",
+    "commander": "^2.9.0",
+    "fs-extra": "^0.26.5",
+    "happn-random-activity-generator": "*",
+    "happn-3": "latest",
+    "happn-logger": "0.0.2",
+    "happn-util-crypto": "0.2.0",
+    "bitcore-lib": "^0.13.16",
+    "request": "^2.69.0",
+    "chai": "^3.2.0",
+    "coveralls": "^2.11.6",
+    "expect.js": "*",
+    "gulp": "^3.9.0",
+    "istanbul": "^0.4.1",
+    "mocha": "*",
+    "shortid": "^2.2.4"
+  },
+  "author": "",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "readme": "ERROR: No README data found!",
+  "gitHead": "73ab37925a9ef3ba8a9323b85152628dfb80993f",
+  "bugs": {
+    "url": "https://github.com/happner/happn-tests-2/issues"
+  },
+  "homepage": "https://github.com/happner/happn-tests-2#readme"
+}
