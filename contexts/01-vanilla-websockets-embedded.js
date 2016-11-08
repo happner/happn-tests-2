@@ -13,6 +13,5 @@ module.exports = {
   listenerClient:function(happnInstance, callback){
 
 	  happn_client.create(undefined, callback);
-
   }
 };

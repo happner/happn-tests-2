@@ -320,19 +320,17 @@ test.initialize('01-vanilla', function(){
 			field1: 'field1'
 		};
 
-
 		var criteria1 = {
 			$or: [{"regions": {$in: ['North', 'South', 'East', 'West']}},
 				{"towns": {$in: ['North.Cape Town', 'South.East London']}},
 				{"categories": {$in: ["Action", "History"]}}],
 			"keywords": {$in: ["bass", "Penny Siopis"]}
-		}
+		};
 
 		var options1 = {
-			fields: {"data": 1},
 			sort: {"field1": 1},
 			limit: 1
-		}
+		};
 
 		var criteria2 = null;
 
@@ -340,7 +338,7 @@ test.initialize('01-vanilla', function(){
 			fields: null,
 			sort: {"field1": 1},
 			limit: 2
-		}
+		};
 
 		publisherclient.set('/01-vanilla-test/' + test_id + '/testsubscribe/data/complex/' + test_path_end, complex_obj, null, function (e, put_result) {
 
