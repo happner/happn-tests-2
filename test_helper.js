@@ -136,6 +136,12 @@ TestHelper.prototype.startHappnService = function(config, callback){
 
 TestHelper.prototype.tryDecouple = function(config){
   try{
+
+    for (var serviceName in config.services){
+      //we cannot decouple
+      if (config.services[serviceName].instance) return config;
+    }
+
     var decoupled =  JSON.parse(JSON.stringify(config));
     return decoupled;
   }catch(e){
@@ -157,7 +163,8 @@ TestHelper.prototype.startHappnServices = function(configs, opts, callback){
 
   async.eachSeries(configs, function(config, configCB){
 
-    var decoupledConfig = _this.tryDecouple(config);
+    if (config.__noDecouple) decoupledConfig = config;
+    else decoupledConfig = _this.tryDecouple(config);
 
     _this.startHappnService(decoupledConfig,
 
